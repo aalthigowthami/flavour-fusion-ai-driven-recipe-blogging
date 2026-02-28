@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flavour Fusion</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input, button { padding: 8px; margin: 5px 0; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🍲 Flavour Fusion: AI Recipe Blogging</h1>
+
+    <form method="POST">
+        <label>Recipe Topic:</label><br>
+        <input type="text" name="topic" required><br>
+
+        <label>Word Count:</label><br>
+        <input type="number" name="word_count" required><br>
+
+        <button type="submit">Generate Blog</button>
+    </form>
+
+    {% if joke %}
+        <h3>😂 Programmer Joke:</h3>
+        <p>{{ joke }}</p>
+    {% endif %}
+
+    {% if blog %}
+        <h2>📝 Generated Recipe Blog:</h2>
+        <p>{{ blog }}</p>
+    {% endif %}
+</body>
+</html>
